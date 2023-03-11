@@ -1,0 +1,368 @@
+:root {
+    --primary: #5e4ae3;
+    --secondary: #d96196;
+    --light: #c78a84;
+    --light-alt: #947bd3;
+    --dark: #05299e;
+    --dark-alt: #242424;
+    --shadow: 0 1rem 1rem 0 rgba(0, 0, 0, .2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    text-transform: capitalize;
+    transition: .4s all ease;
+}
+
+body {
+    background: var(--dark-alt);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: var(--dark-alt);
+    box-shadow: var(--shadow);
+    position: relative;
+    z-index: 1;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: var(--light);
+}
+
+header .heading {
+    color: #9787ff;
+    font-size: 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+header .heading:hover {
+    color: var(--primary);
+    border-left: 3px solid var(--primary);
+    padding-left: .3rem;
+    transform: translateX(2px);
+}
+
+/********** BOBBLE ANIMATION **********/
+@keyframes bobble {
+    0% {
+        transform: translateX(2px);
+    }
+
+    50% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(-2px);
+    }
+}
+
+header .heading span {
+    color: var(--light);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.mailto {
+    font-size: 1.5rem;
+    color: var(--light-alt);
+}
+
+.icon:hover {
+    color: #e09c96;
+    transform: scale(.85);
+}
+
+.container {
+    padding: 2rem;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.main-title {
+    color: var(--secondary);
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 400;
+    margin-top: 1.5rem;
+}
+
+.main-title span {
+    color: var(--light-alt);
+    font-size: 3rem;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.other-tools {
+    text-align: center;
+    list-style: none;
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    color: var(--secondary);
+    cursor: pointer;
+}
+
+.other-tools li {
+    margin-bottom: 6px;
+}
+
+.other-tools li:hover {
+    color: #be5281;
+    border-left: 100px solid var(--secondary);
+}
+
+.more {
+    color: var(--secondary);
+    font-size: 1.3rem;
+}
+
+.more:hover {
+    padding-right: 1rem;
+    border-right: 50px solid var(--light-alt);
+    transform: scale(.95);
+}
+
+.heading {
+    text-align: center;
+    font-weight: 400;
+    font-size: 2rem;
+    color: var(--secondary);
+}
+
+.container-heading {
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #d96196;
+    margin-top: 1.5rem;
+}
+
+.container-heading span {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--secondary);
+    text-decoration: underline;
+}
+
+.creator-icon {
+    animation: bobble 1s infinite;
+}
+
+.form-contanier {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 5vh;
+    animation: glow2 6s infinite;
+}
+
+/********** GLOW ANIMATION **********/
+@keyframes glow2 {
+    0% {
+        border-left: 1px solid var(--secondary);
+    }
+    50% {
+        border-left: 1px solid var(--primary);
+    }
+    100% {
+        border-left: 1px solid var(--secondary);
+    }
+}
+
+input, textarea {
+    background: transparent;
+    color: var(--light);
+    border: none;
+    padding: 9px;
+    margin: auto;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--light);
+}
+
+input {
+    font-size: 1rem;
+    width: 410px;
+}
+
+input:focus {
+    outline: none;
+    animation: glow 1s infinite;
+}
+
+textarea {
+    width: 410px;
+    height: 150px;
+}
+
+textarea:focus {
+    outline: none;
+    animation: glow 1s infinite;
+}
+
+/********** GLOW ANIMATION **********/
+@keyframes glow {
+    0% {
+        border-bottom: 1px solid var(--secondary);
+    }
+    50% {
+        border-bottom: 1px solid transparent;
+    }
+    100% {
+        border-bottom: 1px solid var(--secondary);
+    }
+}
+
+.btn {
+    border: none;
+    width: 430px;
+    padding: 12px;
+    font-size: 1rem;
+    background: var(--secondary);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #fc73ae;
+    box-shadow: var(--shadow);
+}
+
+.about {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.about-heading {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--secondary);
+    margin-bottom: 2rem;
+}
+
+.about-heading span {
+    color: var(--light-alt);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.cog {
+    text-align: center;
+    color: var(--secondary);
+    animation: border_color_change 8s infinite;
+}
+
+@keyframes border_color_change {
+    0% {
+        border-left: 150px solid var(--secondary);
+    }
+    50% {
+        border-left: 0px solid var(--dark-alt);
+    }
+    100% {
+        border-left: 150px solid var(--secondary);
+    }
+}
+
+.cog-icon {
+    font-size: 12rem;
+    animation: cog_animation 8s infinite;
+}
+
+/*********** COG ANIMATION ***********/
+@keyframes cog_animation {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    50% {
+        transform: rotateZ(180deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+.text {
+    max-width: 400px;
+    color: var(--secondary);
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+.text span {
+    font-weight: 600;
+    color: var(--light-alt);
+}
+
+.projects {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.heading-projects {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--secondary);
+    margin-bottom: 2rem;
+}
+
+.heading-projects span {
+    color: var(--light-alt);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.app-title {
+    max-width: 400px;
+    margin: auto;
+    text-align: right;
+    font-size: 4rem;
+    color: var(--secondary);
+}
+
+.app-description {
+    max-width: 400px;
+    margin: auto;
+    color: var(--secondary);
+    text-align: right;
+    font-size: 1rem;
+}
+
+.app-description span {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--light-alt);
+}
+
+.img {
+    text-align: center;
+    width: 50%;
+    box-shadow: var(--shadow);
+    animation: border_glow 4s infinite;   
+}
+
+/*********** IMAGE BORDER ANIMATION ************/
+@keyframes border_glow {
+    0% {
+        border: 3px solid var(--secondary);
+    }
+    50% {
+        border: 3px solid #be5281;
+    }
+    100% {
+        border: 3px solid var(--secondary);
+    }
+}
