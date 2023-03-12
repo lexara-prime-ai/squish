@@ -310,6 +310,7 @@ textarea:focus {
 .projects {
     margin-top: 2rem;
     margin-bottom: 2rem;
+    align-items: center;
 }
 
 .heading-projects {
@@ -331,6 +332,18 @@ textarea:focus {
     text-align: right;
     font-size: 4rem;
     color: var(--secondary);
+}
+
+.app-title span {
+    display: none;
+}
+
+.app-title:hover span {
+    display: inline-block;
+}
+
+.content {
+    text-align: center;
 }
 
 .app-description {
@@ -364,5 +377,135 @@ textarea:focus {
     }
     100% {
         border: 3px solid var(--secondary);
+    }
+}
+
+.download-btn {
+    margin-top: 1.3rem;
+    width: 400px;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    background: var(--secondary);
+    cursor: pointer;
+}
+
+.download-btn:hover {
+    background: #fc73ae;
+    box-shadow: var(--shadow);
+}
+
+@media (max-width:1000px) {
+    .main-title {
+        font-size: 1.5rem;
+    }
+
+    .main-title span {
+        font-size: 2rem;
+    }
+
+    .other-tools {
+        font-size: 1.3rem;
+    }
+
+    .more {
+        font-size: 1rem;
+    }
+
+    .form-contanier {
+        max-width: 400px;
+        margin: auto;
+    }
+
+    input, textarea {
+        width: 310px;
+    }
+    
+    .btn {
+        width: 340px;
+    }
+
+    .about-heading {
+        font-size: 2.5rem;
+    }
+
+    .text {
+        font-size: 1rem;
+    }
+
+    .heading-projects {
+        font-size: 2.5rem;
+    }
+
+    .app-title {
+        font-size: 2rem;
+    }
+
+    .app-description {
+        font-size: 1rem;
+    }
+
+    .img {
+        max-width: 400px;
+        margin: auto;
+    }
+}
+
+@media (max-width:800px) {
+    .wrapper {
+        display: block;
+        width: 100%;
+    }
+
+    .form-contanier {
+        animation: none;
+        margin: auto;
+    }
+
+    input, textarea {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 1rem;
+        padding: 12px;
+        text-align: center;
+        width: 210px;
+
+    }
+
+    textarea {
+        height: 100px;
+    }
+
+    .btn {
+        margin-top: 1rem;
+        width: 230px;
+    }
+    
+    .cog-icon {
+        font-size: 4rem;
+    }
+
+    .text {
+        margin-top: 1.3rem;
+        text-align: center;
+    }
+
+    .download-btn {
+        width: 230px;
+        margin-bottom: 2rem;
+    }
+
+    .img {
+        width: 100%;
+    }
+
+    .projects {
+        text-align: center;
+    }
+}
+
+@media (max-width:760px) {
+    .text {
+        max-width: 600px;
     }
 }
