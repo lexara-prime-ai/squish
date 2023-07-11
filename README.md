@@ -5,3 +5,5 @@ A Sleek, Modern Dark Themed Template
 
 ## Preview
 ![preview image](https://github.com/projectfinalaudio/squish/blob/master/squish_preview.png?raw=true)
+
+![preview image](https://github.com/projectfinalaudio/squish/blob/master/other_apps.png?raw=true)
